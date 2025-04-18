@@ -1,0 +1,130 @@
+:root {
+    --header-color: #D9D9D9;
+    --aside-color: #1A5AB2;
+    --white: #fff;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 13fr;
+    grid-template-areas: 
+    'header header'
+    'aside main'
+    ;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    grid-area: header;
+    width: 100%;
+    background-color: var(--header-color);
+    justify-content: space-between;
+    align-items: center;
+}
+
+#company-logo {
+    width: 4em;
+    margin-left: 3em;
+    cursor: pointer;
+}
+
+#user-logo {
+    width: 2.5em;
+    border-radius: 50%;
+    background-color: var(--white);
+    margin-right: 2em;
+    cursor: pointer;
+}
+
+.acc-options {
+    display: flex;
+    gap: 1.5em;
+    padding: 1em;
+}
+
+.acc-options i {
+    font-size: 1.2em;
+    cursor: pointer;
+    color: var(--aside-color);
+}
+
+.acc-options i:hover {
+    color: #4e83ce;
+}
+
+.acc-options button {
+    border: none;
+    background-color: var(--header-color);
+}
+
+/* Aside */
+
+.aside {
+    grid-area: aside;
+    background-color: var(--aside-color);
+    border-bottom-right-radius: .5em;
+}
+
+/* Main */
+
+.main {
+    display: flex;
+    grid-area: main;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main h1 {
+    margin-left: 3em;
+    align-self: flex-start;
+}
+
+.cards-container {
+    display: grid;
+    height: 85%;
+    width: 90%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 2em;
+}
+
+.card {
+    background-color: var(--header-color);
+    border-radius: 1em;
+}
+
+.card-1 {
+    grid-column: span 4;
+}
+
+.card-2 {
+    grid-column: span 1;
+}
+
+.card-3 {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+.card-4 {
+    grid-column: 1;
+}
+
+.grafico-bloco {
+    width: 50%;
+    height: 70%;
+    padding: 1em;
+    border-radius: 10px;
+    /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
+  }
+  canvas {
+    width: 90% !important;
+    height: 100% !important;
+  }
+
+
